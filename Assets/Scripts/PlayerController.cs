@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float xInput = Input.GetAxis("Horizontal");
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
@@ -89,8 +90,6 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(xInput));
         anim.SetBool("isGrounded", isGrounded);
 
-
-        //if (xInput > 0 && sr.flipX || xInput < 0 && )
 
         if (Input.GetButtonDown("Fire1"))
         {
