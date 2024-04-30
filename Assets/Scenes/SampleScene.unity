@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34006612}
   - component: {fileID: 34006613}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57712576}
   - component: {fileID: 57712577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 85901506}
   - component: {fileID: 85901507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86212836}
   - component: {fileID: 86212837}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198079109}
   - component: {fileID: 198079110}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198765434}
   - component: {fileID: 198765435}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211113629}
   - component: {fileID: 211113630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216611546}
   - component: {fileID: 216611547}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326027236}
   - component: {fileID: 326027237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 428541028}
   - component: {fileID: 428541029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WorldEdge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452065611}
   - component: {fileID: 452065612}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544228018}
   - component: {fileID: 544228019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 588859209}
   - component: {fileID: 588859210}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1258,6 +1258,37 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &653297921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653297922}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &653297922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653297921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2112868388}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662350982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662350983}
   - component: {fileID: 662350984}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678260969}
   - component: {fileID: 678260970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1422,7 +1453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759489316}
   - component: {fileID: 759489317}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810111513}
   - component: {fileID: 810111514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864738187}
   - component: {fileID: 864738188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888752584}
   - component: {fileID: 888752585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1027864327}
   - component: {fileID: 1027864328}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1803,7 +1834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054449712}
   - component: {fileID: 1054449713}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1880,7 +1911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175081723}
   - component: {fileID: 1175081724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277690465}
   - component: {fileID: 1277690466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WorldEdge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2034,7 +2065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1455313864}
   - component: {fileID: 1455313865}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2111,7 +2142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1501309573}
   - component: {fileID: 1501309574}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WorldEdge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2188,7 +2219,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1604871315}
   - component: {fileID: 1604871314}
-  - component: {fileID: 1604871316}
   m_Layer: 0
   m_Name: DonutPlains_Level
   m_TagString: Untagged
@@ -2263,27 +2293,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1604871316
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604871313}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 99bbbf6d3f1d75a4687e5ea07ef0d279, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1680702234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680702235}
   - component: {fileID: 1680702236}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WorldEdge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,7 +2380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775954660}
   - component: {fileID: 1775954661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,7 +2457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800192605}
   - component: {fileID: 1800192606}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2525,7 +2534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1858655986}
   - component: {fileID: 1858655987}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2598,7 +2607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1902983288}
   - component: {fileID: 1902983289}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2671,7 +2680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098728584}
   - component: {fileID: 2098728585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,8 +2760,9 @@ GameObject:
   - component: {fileID: 2112868386}
   - component: {fileID: 2112868385}
   - component: {fileID: 2112868384}
+  - component: {fileID: 2112868389}
   m_Layer: 0
-  m_Name: Mario_Idle
+  m_Name: Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2815,7 +2825,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2829,7 +2839,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &2112868386
 Animator:
   serializedVersion: 5
@@ -2912,12 +2922,34 @@ Transform:
   m_GameObject: {fileID: 2112868383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.29, y: -2.34, z: 0}
+  m_LocalPosition: {x: -4.62, y: -2.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 653297922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112868389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112868383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774b4287997be904587ba7c08601bc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TestMode: 0
+  speed: 5
+  jumpForce: 7
+  isGrounded: 0
+  groundCheck: {fileID: 653297922}
+  isGroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckRadius: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

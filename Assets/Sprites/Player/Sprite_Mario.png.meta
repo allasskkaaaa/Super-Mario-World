@@ -950,7 +950,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Mario_40
+      name: Mario_Attack1
       rect:
         serializedVersion: 2
         x: 388
@@ -971,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Mario_41
+      name: Mario_Attack2
       rect:
         serializedVersion: 2
         x: 408
@@ -992,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Mario_42
+      name: Mario_Attack3
       rect:
         serializedVersion: 2
         x: 428
@@ -1403,6 +1403,9 @@ TextureImporter:
     nameFileIdTable:
       Crouch_01: 240696990
       Crouch_02: 1923977118
+      Mario_Attack1: 201914234
+      Mario_Attack2: -1925373459
+      Mario_Attack3: 1626206263
       Mario_Die_01: -370344609
       Mario_Die_02: -1645322406
       Mario_GroundPound_01: 1984178582
@@ -1445,9 +1448,6 @@ TextureImporter:
       Sprite_Mario_37: 1276789956
       Sprite_Mario_38: 1701008015
       Sprite_Mario_39: -1035692719
-      Sprite_Mario_40: 201914234
-      Sprite_Mario_41: -1925373459
-      Sprite_Mario_42: 1626206263
       Sprite_Mario_43: 1491738754
       Sprite_Mario_44: 1195084055
       Sprite_Mario_45: 255546614
