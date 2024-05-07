@@ -76,6 +76,33 @@ public class PlayerController : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
 
+       
+     
+
+        //Sprite Flipping
+        if (xInput != 0) sr.flipX = (xInput < 0);
+
+        anim.SetFloat("speed", Mathf.Abs(xInput));
+        anim.SetBool("isGrounded", isGrounded);
+
+        
+        //Input Checks
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            anim.SetTrigger("attack");
+        }
+
+        if (Input.GetButtonDown("Jump") && !isGrounded)
+        {
+            anim.SetTrigger("jumpAttack");
+        }
+
+        //Check animation frame for physics
         if (curPlayingClips.Length > 0)
         {
             if (curPlayingClips[0].clip.name == "Mario_Attack")
@@ -86,33 +113,14 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = moveDirection;
 
             }
+            if (curPlayingClips[0].clip.name == "Mario_JumpAttack")
+                anim.gameObject.GetComponent<Rigidbody2D>().gravityScale = 5;
+            else
+            {
+                anim.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            }
 
         }
-
-        
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
-
-        //Sprite Flipping
-        if (xInput != 0) sr.flipX = (xInput < 0);
-
-        anim.SetFloat("speed", Mathf.Abs(xInput));
-        anim.SetBool("isGrounded", isGrounded);
-
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            anim.SetTrigger("attack");
-        }
-
-        if (Input.GetButtonDown("Fire1") && !isGrounded)
-        {
-            anim.SetTrigger("jumpAttack");
-        }
-
 
 
     }

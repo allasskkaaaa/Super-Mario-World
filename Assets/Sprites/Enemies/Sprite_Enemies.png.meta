@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -2420,15 +2420,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_110
+      name: PlayerProjectile
       rect:
         serializedVersion: 2
         x: 396
         y: 534
         width: 6
         height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4499,7 +4499,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Turret_Projectile
+      name: EnemyProjectile
       rect:
         serializedVersion: 2
         x: 597
@@ -14547,6 +14547,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      EnemyProjectile: -126855643
+      PlayerProjectile: 746693810
       Sprite_Enemies_0: -1261840933
       Sprite_Enemies_1: -1113430256
       Sprite_Enemies_10: -1732209236
@@ -14561,7 +14563,6 @@ TextureImporter:
       Sprite_Enemies_108: 1215828874
       Sprite_Enemies_109: 620623745
       Sprite_Enemies_11: 1029404356
-      Sprite_Enemies_110: 746693810
       Sprite_Enemies_111: 2146794297
       Sprite_Enemies_112: -1920829174
       Sprite_Enemies_113: -72523251
@@ -15233,7 +15234,6 @@ TextureImporter:
       Turret_5: 1454505760
       Turret_6: 8683711
       Turret_7: -1397567584
-      Turret_Projectile: -126855643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
