@@ -1790,7 +1790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_80
+      name: PowerUp
       rect:
         serializedVersion: 2
         x: 42
@@ -14549,6 +14549,7 @@ TextureImporter:
     nameFileIdTable:
       EnemyProjectile: -126855643
       PlayerProjectile: 746693810
+      PowerUp: -1817623744
       Sprite_Enemies_0: -1261840933
       Sprite_Enemies_1: -1113430256
       Sprite_Enemies_10: -1732209236
@@ -15206,7 +15207,6 @@ TextureImporter:
       Sprite_Enemies_78: -1900477744
       Sprite_Enemies_79: 248946141
       Sprite_Enemies_8: -460745665
-      Sprite_Enemies_80: -1817623744
       Sprite_Enemies_81: 1939132510
       Sprite_Enemies_82: -967387759
       Sprite_Enemies_83: -897289296
