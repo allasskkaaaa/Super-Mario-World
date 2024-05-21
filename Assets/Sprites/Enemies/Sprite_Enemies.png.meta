@@ -1202,7 +1202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_52
+      name: PowerUp1
       rect:
         serializedVersion: 2
         x: 76
@@ -3008,13 +3008,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_138
+      name: Life
       rect:
         serializedVersion: 2
         x: 831
         y: 448
-        width: 36
-        height: 82
+        width: 16
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6368,7 +6368,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_298
+      name: Coin
       rect:
         serializedVersion: 2
         x: 99
@@ -14547,9 +14547,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Coin: 907041395
       EnemyProjectile: -126855643
+      Life: 961522524
       PlayerProjectile: 746693810
       PowerUp: -1817623744
+      PowerUp1: 1536982295
       Sprite_Enemies_0: -1261840933
       Sprite_Enemies_1: -1113430256
       Sprite_Enemies_10: -1732209236
@@ -14593,7 +14596,6 @@ TextureImporter:
       Sprite_Enemies_135: -1889585389
       Sprite_Enemies_136: 244289626
       Sprite_Enemies_137: -1282693590
-      Sprite_Enemies_138: 961522524
       Sprite_Enemies_139: 145256856
       Sprite_Enemies_14: 555454149
       Sprite_Enemies_140: -1739520669
@@ -14762,7 +14764,6 @@ TextureImporter:
       Sprite_Enemies_295: 878434665
       Sprite_Enemies_296: 80945677
       Sprite_Enemies_297: 817863986
-      Sprite_Enemies_298: 907041395
       Sprite_Enemies_299: -730882422
       Sprite_Enemies_3: 132455251
       Sprite_Enemies_30: -418293525
@@ -15009,7 +15010,6 @@ TextureImporter:
       Sprite_Enemies_517: 3070143
       Sprite_Enemies_518: -841730631
       Sprite_Enemies_519: -1888439738
-      Sprite_Enemies_52: 1536982295
       Sprite_Enemies_520: 332366106
       Sprite_Enemies_521: 889516175
       Sprite_Enemies_522: -1563469215
