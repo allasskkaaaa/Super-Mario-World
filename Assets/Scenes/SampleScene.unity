@@ -3636,7 +3636,7 @@ MonoBehaviour:
   dmgCooldown: 1
   isInvulnerable: 0
   respawnPoint: {fileID: 337478471}
-  maxLives: 5
+  maxLives: 3
   speed: 5
   jumpForce: 8
   isGrounded: 0
