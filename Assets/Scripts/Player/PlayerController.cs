@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public bool TestMode;
     //Player Gameplay Variables
 
+    public float dmgCooldown = 1.0f; //Cooldown of when the player takes damage again
+    public bool isInvulnerable = false;
+    public GameObject respawnPoint; //Respawn point using game object
     private int _lives;
     public int lives
     {
@@ -25,7 +28,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField] private int maxLives = 5;
+    [SerializeField] public int maxLives = 5;
     //Movement Var
     [SerializeField] private int speed;
     [SerializeField] private int jumpForce = 3;
@@ -93,6 +96,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        _lives = maxLives;
+
 
         if (speed <= 0)
         {
@@ -141,8 +146,8 @@ public class PlayerController : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
 
-       
-     
+
+
 
         //Sprite Flipping
         if (xInput != 0) sr.flipX = (xInput < 0);
@@ -150,7 +155,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("speed", Mathf.Abs(xInput));
         anim.SetBool("isGrounded", isGrounded);
 
-        
+
         //Input Checks
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -188,6 +193,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
     public void IncreaseGravity()
     {
         rb.gravityScale = 10;
@@ -195,11 +201,14 @@ public class PlayerController : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("GameOver goes here");
+
+        Destroy(gameObject);
     }
 
     private void Respawn()
     {
-        Debug.Log("Respawn goes here");
+        
+        transform.position = respawnPoint.transform.position;
+        anim.SetTrigger("damaged");
     }
 }
