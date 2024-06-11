@@ -8,6 +8,12 @@ public class Projectiles : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("PowerUp") && !collision.gameObject.CompareTag("Collectible"))
             Destroy(gameObject);
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
     public float lifetime;
 
