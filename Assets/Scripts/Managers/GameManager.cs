@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     static GameManager _instance;
     public static GameManager instance => _instance;
 
-    private int maxLives = 3;
+    
     private int _lives;
     public int lives
     {
@@ -24,6 +25,12 @@ public class GameManager : MonoBehaviour
             //broadcast can happen here
         }
     }
+
+    [SerializeField] private int maxLives = 3;
+    [SerializeField] private PlayerController playerPrefab;
+
+    [HideInInspector] public PlayerController PlayerInstance => _playerinstance;
+    PlayerController _playerinstance = null;
 
     // Start is called before the first frame update
     void Awake()
