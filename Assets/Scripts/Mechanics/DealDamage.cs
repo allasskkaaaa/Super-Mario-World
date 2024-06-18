@@ -14,7 +14,7 @@ public class DealDamage : MonoBehaviour
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             if (playerController != null)
             {
-                playerController.lives -= damage;
+                GameManager.instance.lives -= damage;
 
             }
         }

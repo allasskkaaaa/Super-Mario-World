@@ -29,7 +29,7 @@ public class Pickup : MonoBehaviour
             switch (type)
             {
                 case PickupType.Life:
-                    pc.lives++;
+                    GameManager.instance.lives++;
                     break;
                 case PickupType.Score:
                     Debug.Log("I should be changing some sort of variable!");

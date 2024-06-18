@@ -12,23 +12,8 @@ public class PlayerController : MonoBehaviour
     public float dmgCooldown = 1.0f; //Cooldown of when the player takes damage again
     public bool isInvulnerable = false;
     public GameObject respawnPoint; //Respawn point using game object
-    private int _lives;
-    public int lives
-    {
-        get => _lives;
-        set
-        {
-            if (value <= 0) GameOver();
-            if (value < _lives) Respawn();
-            if (value > maxLives) value = maxLives;
-            _lives = value;
 
-            Debug.Log($"Lives have been set to {_lives}");
-            //broadcast can happen here
-        }
-    }
-
-    [SerializeField] public int maxLives = 5;
+    [SerializeField] public int maxLives = 3;
     //Movement Var
     [SerializeField] private int speed;
     [SerializeField] private int jumpForce = 3;
@@ -96,7 +81,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        _lives = maxLives;
 
 
         if (speed <= 0)
@@ -197,12 +181,6 @@ public class PlayerController : MonoBehaviour
     public void IncreaseGravity()
     {
         rb.gravityScale = 10;
-    }
-
-    private void GameOver()
-    {
-
-        Destroy(gameObject);
     }
 
     private void Respawn()
