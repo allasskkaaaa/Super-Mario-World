@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
 
     public static bool isPaused = false;
+    public int score = 0;
 
     private int _lives;
     public int lives
@@ -67,6 +68,8 @@ public class GameManager : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Game")
             {
+                pauseMenu.SetActive(false);
+                isPaused = false;
                 SceneManager.LoadScene(0);
             }
                 
@@ -78,21 +81,26 @@ public class GameManager : MonoBehaviour
                 
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (SceneManager.GetActiveScene().name == "Game")
         {
-            if (isPaused == false)
+            if (Input.GetKeyDown(KeyCode.P))
             {
-                pauseMenu.SetActive(true);
-                isPaused = true;
-                Time.timeScale = 0f;
-            } else
-            {
-                pauseMenu.SetActive(false);
-                Time.timeScale = 1f;
-                isPaused = false;
+                if (isPaused == false)
+                {
+                    pauseMenu.SetActive(true);
+                    isPaused = true;
+                    Time.timeScale = 0f;
+                }
+                else
+                {
+                    pauseMenu.SetActive(false);
+                    Time.timeScale = 1f;
+                    isPaused = false;
+                }
+
             }
-            
         }
+            
     }
     public void GameOver()
     {
@@ -131,5 +139,18 @@ public class GameManager : MonoBehaviour
     public void startGame()
     {
         SceneManager.LoadScene(1);
+        restartGame();
+    }
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene(1);
+        score = 0;
+
+    }
+
+    public void addScore()
+    {
+        score++;
     }
 }

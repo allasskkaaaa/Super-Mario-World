@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class DealDamage : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+    
 
     public int damage = 1; // Amount of damage to deal
 
@@ -13,6 +20,7 @@ public class DealDamage : MonoBehaviour
         {
             if (GameManager.instance.PlayerInstance != null)
             {
+                audioManager.PlaySFX(audioManager.damage);
                 GameManager.instance.lives -= damage;
 
             }

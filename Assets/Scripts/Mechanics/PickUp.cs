@@ -32,6 +32,7 @@ public class Pickup : MonoBehaviour
                     GameManager.instance.lives++;
                     break;
                 case PickupType.Score:
+                    GameManager.instance.score++;
                     Debug.Log("I should be changing some sort of variable!");
                     break;
                 case PickupType.PowerupSpeed:
