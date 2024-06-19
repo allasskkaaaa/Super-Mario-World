@@ -24,7 +24,7 @@ public class Pickup : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerController pc = collision.GetComponent<PlayerController>();
+            PlayerController pc = GameManager.instance.PlayerInstance;
 
             switch (type)
             {

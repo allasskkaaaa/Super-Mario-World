@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
 {
     static GameManager _instance;
     public static GameManager instance => _instance;
+    public GameObject pauseMenu;
 
-    
+    public static bool isPaused = false;
+
     private int _lives;
     public int lives
     {
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public PlayerController PlayerInstance => _playerinstance;
     PlayerController _playerinstance = null;
+    Transform currentCheckpoint;
 
     // Start is called before the first frame update
     void Awake()
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        pauseMenu.SetActive(false);
+
         if (maxLives <= 0)
         {
             maxLives = 3;
@@ -68,8 +73,25 @@ public class GameManager : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "Title")
             {
                 SceneManager.LoadScene(1);
+                
             }
                 
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (isPaused == false)
+            {
+                pauseMenu.SetActive(true);
+                isPaused = true;
+                Time.timeScale = 0f;
+            } else
+            {
+                pauseMenu.SetActive(false);
+                Time.timeScale = 1f;
+                isPaused = false;
+            }
+            
         }
     }
     public void GameOver()
@@ -78,4 +100,36 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    private void Respawn()
+    {
+        _playerinstance.transform.position = currentCheckpoint.position;
+        Debug.Log("Respawn");
+    }
+
+    public void SpawnPlayer(Transform spawnLocation)
+    {
+        _playerinstance = Instantiate(playerPrefab, spawnLocation.position, spawnLocation.rotation);
+        currentCheckpoint = spawnLocation;
+    }
+
+    public void UpdateCheckpoint (Transform updatedCheckpoint)
+    {
+        currentCheckpoint = updatedCheckpoint;
+    }
+
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene(0);
+        
+    }
+
+    public void quitGame()
+    {
+       Application.Quit();
+    }
+
+    public void startGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

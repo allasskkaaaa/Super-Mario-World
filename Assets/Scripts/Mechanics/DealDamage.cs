@@ -11,8 +11,7 @@ public class DealDamage : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            if (playerController != null)
+            if (GameManager.instance.PlayerInstance != null)
             {
                 GameManager.instance.lives -= damage;
 

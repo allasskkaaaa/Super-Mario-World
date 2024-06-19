@@ -183,10 +183,5 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 10;
     }
 
-    private void Respawn()
-    {
-        
-        transform.position = respawnPoint.transform.position;
-        anim.SetTrigger("damaged");
-    }
+    
 }

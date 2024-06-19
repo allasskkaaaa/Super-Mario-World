@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
-    public Transform player; // Reference to the player's transform
     private SpriteRenderer spriteRenderer;
     public float detectionRange = 5f; //Setting Detection Range
     private Animator anim;
@@ -18,17 +17,17 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (GameManager.instance.PlayerInstance != null)
         {
             //Checks the distance between the enemy and the player
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            float distanceToPlayer = Vector2.Distance(transform.position, GameManager.instance.PlayerInstance.transform.position);
 
             if (distanceToPlayer <= detectionRange)
             {
                 anim.SetBool("Active",true);
 
                 // Check if the player's position is to the left or right of the enemy
-                if (player.position.x > transform.position.x)
+                if (GameManager.instance.PlayerInstance.transform.position.x > transform.position.x)
                 {
                     // Player is to the right, face right
                     spriteRenderer.flipX = false;
